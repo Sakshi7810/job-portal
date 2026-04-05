@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jobs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class"
+    }
+  </script>
+</head>
+
+<body class="bg-gradient-to-r from-blue-900 to-blue-700 min-h-screen text-white">
+
+<!-- Navbar -->
+<nav class="flex justify-between items-center p-5 bg-black/20 backdrop-blur-lg">
+  <h1 class="text-2xl font-bold">Job Portal</h1>
+  <button onclick="toggleTheme()" class="bg-white text-black px-3 py-1 rounded">
+    🌙
+  </button>
+</nav>
+
+<!-- Search -->
+<div class="p-6">
+  <input 
+    id="searchInput"
+    type="text"
+    placeholder="Search jobs..."
+    class="w-full p-3 rounded-lg text-black"
+  >
+</div>
+
+<!-- Job Cards -->
+<div id="jobList" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+

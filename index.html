@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Job Portal</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class"
+    }
+  </script>
+
+  <!-- Animations -->
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-hover:hover {
+      transform: translateY(-10px) scale(1.02);
+      transition: 0.3s;
+    }
+
+    .btn-hover:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-r from-blue-900 to-blue-700 text-white min-h-screen dark:bg-black">
+
+<!-- Navbar -->
+<nav class="flex justify-between items-center px-4 py-2 bg-blue-800 text-white transition-all duration-300 dark:bg-black">
+
+  <!-- Logo + Title (LEFT, NO SPACE) -->
+  <div class="flex items-center leading-none">
+
+    <img src="assets/job-logo.png"
+         class="w-20 h-22 object-contain logo-animate">
+
+    <h1 class="text-xl md:text-2xl font-bold ml-0">
+      JobPortal
+    </h1>
+
+  </div>
+
+  <!-- Right Side -->
+  <div class="flex items-center gap-3 text-sm">
+
+    <a href="login.html" class="hover:underline flex items-center gap-1">
+      <i data-feather="log-in"></i> Login
+    </a>
+
+    <a href="jobs.html"
+       class="bg-white text-blue-900 px-3 py-1 rounded-md shadow btn-hover flex items-center gap-1">
+       <i data-feather="search"></i> Jobs
+    </a>
+
+    <button onclick="toggleTheme()"
+      class="bg-white text-black px-2 py-1 rounded-md btn-hover">
+      🌙
+    </button>
+
+  </div>
+
+</nav>
+
+
+<!-- Hero Section -->
+<section class="flex flex-col items-center justify-center text-center mt-24 px-6 fade-in">
+
+  <h2 class="text-5xl font-bold leading-tight">
+    Find Your <span class="text-yellow-300">Dream Job</span>
+  </h2>
+
+  <p class="mt-4 text-lg text-gray-200 dark:text-gray-400 max-w-xl">
+    Explore thousands of opportunities with top companies.
+  </p>
+
+  <div class="mt-6 space-x-4">
+
+    <a href="jobs.html"
+       class="bg-white text-blue-900 px-6 py-3 rounded-xl shadow-lg btn-hover inline-flex items-center gap-2">
+       <i data-feather="arrow-right"></i> Get Started
+    </a>
+
+    <a href="login.html"
+       class="border border-white px-6 py-3 rounded-xl btn-hover inline-flex items-center gap-2">
+       <i data-feather="user"></i> Login
+    </a>
+
+  </div>
+
+</section>
+
+<!-- Features -->
+<section class="mt-20 px-6 grid md:grid-cols-3 gap-6 fade-in">
+
+  <div class="bg-white/20 dark:bg-gray-800 p-6 rounded-xl text-center backdrop-blur-lg card-hover">
+    <i data-feather="search" class="mx-auto mb-3"></i>
+    <h3 class="text-xl font-bold">Easy Search</h3>
+    <p class="text-sm mt-2">Find jobs quickly</p>
+  </div>
+
+  <div class="bg-white/20 dark:bg-gray-800 p-6 rounded-xl text-center backdrop-blur-lg card-hover">
+    <i data-feather="briefcase" class="mx-auto mb-3"></i>
+    <h3 class="text-xl font-bold">Top Companies</h3>
+    <p class="text-sm mt-2">Apply to trusted companies</p>
+  </div>
+
+  <div class="bg-white/20 dark:bg-gray-800 p-6 rounded-xl text-center backdrop-blur-lg card-hover">
+    <i data-feather="send" class="mx-auto mb-3"></i>
+    <h3 class="text-xl font-bold">Quick Apply</h3>
+    <p class="text-sm mt-2">Apply in one click</p>
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="text-center mt-16 p-4 text-gray-300 dark:text-gray-500 fade-in">
+  © 2026 Job Portal
+</footer>
+
+<!-- JS -->
+<script>
+function toggleTheme() {
+  document.documentElement.classList.toggle("dark");
+}
+
+// Load Icons
+feather.replace();
+</script>
+
+</body>
+</html>
