@@ -37,18 +37,19 @@
   </style>
 </head>
 
-<body class="bg-gradient-to-r from-blue-900 to-blue-700 text-white min-h-screen dark:bg-black">
+<!-- WHITE BACKGROUND -->
+<body class="bg-white text-black min-h-screen dark:bg-black dark:text-white">
 
 <!-- Navbar -->
-<nav class="flex justify-between items-center px-4 py-2 bg-blue-800 text-white transition-all duration-300 dark:bg-black">
+<nav class="flex justify-between items-center px-4 py-3 bg-black text-white dark:bg-gray-900">
 
-  <!-- Logo + Title (LEFT, NO SPACE) -->
-  <div class="flex items-center leading-none">
+  <!-- Logo + Title -->
+  <div class="flex items-center">
 
     <img src="assets/job-logo.png"
-         class="w-20 h-22 object-contain logo-animate">
+         class="w-20 object-contain">
 
-    <h1 class="text-xl md:text-2xl font-bold ml-0">
+    <h1 class="text-xl md:text-2xl font-bold ml-1">
       JobPortal
     </h1>
 
@@ -62,7 +63,7 @@
     </a>
 
     <a href="jobs.html"
-       class="bg-white text-blue-900 px-3 py-1 rounded-md shadow btn-hover flex items-center gap-1">
+       class="bg-white text-black px-3 py-1 rounded-md shadow btn-hover flex items-center gap-1">
        <i data-feather="search"></i> Jobs
     </a>
 
@@ -75,27 +76,26 @@
 
 </nav>
 
-
 <!-- Hero Section -->
 <section class="flex flex-col items-center justify-center text-center mt-24 px-6 fade-in">
 
   <h2 class="text-5xl font-bold leading-tight">
-    Find Your <span class="text-yellow-300">Dream Job</span>
+    Find Your <span class="text-gray-500">Dream Job</span>
   </h2>
 
-  <p class="mt-4 text-lg text-gray-200 dark:text-gray-400 max-w-xl">
+  <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-xl">
     Explore thousands of opportunities with top companies.
   </p>
 
   <div class="mt-6 space-x-4">
 
     <a href="jobs.html"
-       class="bg-white text-blue-900 px-6 py-3 rounded-xl shadow-lg btn-hover inline-flex items-center gap-2">
+       class="bg-black text-white px-6 py-3 rounded-xl shadow-lg btn-hover inline-flex items-center gap-2">
        <i data-feather="arrow-right"></i> Get Started
     </a>
 
     <a href="login.html"
-       class="border border-white px-6 py-3 rounded-xl btn-hover inline-flex items-center gap-2">
+       class="border border-black px-6 py-3 rounded-xl btn-hover inline-flex items-center gap-2 dark:border-white">
        <i data-feather="user"></i> Login
     </a>
 
@@ -106,19 +106,19 @@
 <!-- Features -->
 <section class="mt-20 px-6 grid md:grid-cols-3 gap-6 fade-in">
 
-  <div class="bg-white/20 dark:bg-gray-800 p-6 rounded-xl text-center backdrop-blur-lg card-hover">
+  <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl text-center card-hover">
     <i data-feather="search" class="mx-auto mb-3"></i>
     <h3 class="text-xl font-bold">Easy Search</h3>
     <p class="text-sm mt-2">Find jobs quickly</p>
   </div>
 
-  <div class="bg-white/20 dark:bg-gray-800 p-6 rounded-xl text-center backdrop-blur-lg card-hover">
+  <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl text-center card-hover">
     <i data-feather="briefcase" class="mx-auto mb-3"></i>
     <h3 class="text-xl font-bold">Top Companies</h3>
     <p class="text-sm mt-2">Apply to trusted companies</p>
   </div>
 
-  <div class="bg-white/20 dark:bg-gray-800 p-6 rounded-xl text-center backdrop-blur-lg card-hover">
+  <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl text-center card-hover">
     <i data-feather="send" class="mx-auto mb-3"></i>
     <h3 class="text-xl font-bold">Quick Apply</h3>
     <p class="text-sm mt-2">Apply in one click</p>
@@ -127,7 +127,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="text-center mt-16 p-4 text-gray-300 dark:text-gray-500 fade-in">
+<footer class="text-center mt-16 p-4 text-gray-500 dark:text-gray-400 fade-in">
   © 2026 Job Portal
 </footer>
 

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>Jobs</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -11,14 +12,19 @@
   </script>
 </head>
 
-<body class="bg-gradient-to-r from-blue-900 to-blue-700 min-h-screen text-white">
+<!-- WHITE BACKGROUND -->
+<body class="bg-white text-black min-h-screen dark:bg-black dark:text-white">
 
 <!-- Navbar -->
-<nav class="flex justify-between items-center p-5 bg-black/20 backdrop-blur-lg">
+<nav class="flex justify-between items-center p-5 bg-black text-white dark:bg-gray-900">
+
   <h1 class="text-2xl font-bold">Job Portal</h1>
-  <button onclick="toggleTheme()" class="bg-white text-black px-3 py-1 rounded">
+
+  <button onclick="toggleTheme()" 
+    class="bg-white text-black px-3 py-1 rounded">
     🌙
   </button>
+
 </nav>
 
 <!-- Search -->
@@ -27,14 +33,24 @@
     id="searchInput"
     type="text"
     placeholder="Search jobs..."
-    class="w-full p-3 rounded-lg text-black"
+    class="w-full p-3 rounded-lg border border-gray-300 text-black 
+           dark:bg-gray-800 dark:text-white dark:border-gray-600"
   >
 </div>
 
 <!-- Job Cards -->
-<div id="jobList" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6"></div>
+<div id="jobList" 
+     class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+</div>
 
 <script src="js/script.js"></script>
+
+<!-- Dark Mode Script -->
+<script>
+function toggleTheme() {
+  document.documentElement.classList.toggle("dark");
+}
+</script>
+
 </body>
 </html>
-
