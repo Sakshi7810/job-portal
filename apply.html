@@ -2,22 +2,50 @@
 <html>
 <head>
   <title>Apply</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class"
+    }
+  </script>
 </head>
 
-<body class="bg-blue-900 flex justify-center items-center h-screen">
+<!-- BLACK & WHITE BACKGROUND -->
+<body class="bg-white text-black flex justify-center items-center h-screen dark:bg-black dark:text-white">
 
-<div class="bg-white p-6 rounded w-96">
-  <h2 class="text-xl mb-4">Apply</h2>
+<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl w-96 shadow-lg">
 
-  <input placeholder="Full Name" class="w-full p-2 mb-3 border">
-  <input type="file" class="w-full mb-3">
+  <h2 class="text-xl font-bold mb-4 text-center">Apply for Job</h2>
 
-  <button onclick="applyJob()" class="w-full bg-blue-900 text-white p-2">
+  <input 
+    id="name"
+    placeholder="Full Name" 
+    class="w-full p-2 mb-3 border border-gray-300 rounded 
+           dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+  >
+
+  <input 
+    type="file" 
+    class="w-full mb-3"
+  >
+
+  <button 
+    onclick="submitApplication()" 
+    class="w-full bg-black text-white p-2 rounded hover:opacity-80">
     Submit
   </button>
+
 </div>
 
-<script src="js/script.js"></script>
+<script>
+function submitApplication() {
+  alert("Application Submitted Successfully!");
+  window.location.href = "jobs.html";
+}
+
+</script>
+
 </body>
 </html>

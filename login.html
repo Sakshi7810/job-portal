@@ -2,20 +2,63 @@
 <html>
 <head>
   <title>Login</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class"
+    }
+  </script>
 </head>
 
-<body class="bg-blue-900 flex justify-center items-center h-screen">
+<!-- WHITE BACKGROUND -->
+<body class="bg-white text-black flex justify-center items-center h-screen dark:bg-black dark:text-white">
 
-<div class="bg-white p-6 rounded w-80">
-  <h2 class="text-xl font-bold mb-4">Login</h2>
+<!-- Login Card -->
+<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl w-80 shadow-lg">
 
-  <input id="email" type="email" placeholder="Email" class="w-full p-2 mb-3 border">
-  <input id="password" type="password" placeholder="Password" class="w-full p-2 mb-3 border">
+  <h2 class="text-xl font-bold mb-4 text-center">Login</h2>
 
-  <button onclick="login()" class="w-full bg-blue-900 text-white p-2">Login</button>
+  <input 
+    id="email" 
+    type="email" 
+    placeholder="Email" 
+    class="w-full p-2 mb-3 border border-gray-300 rounded 
+           dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+  >
+
+  <input 
+    id="password" 
+    type="password" 
+    placeholder="Password" 
+    class="w-full p-2 mb-3 border border-gray-300 rounded 
+           dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+  >
+
+  <button 
+    onclick="login()" 
+    class="w-full bg-black text-white p-2 rounded hover:opacity-80">
+    Login
+  </button>
+
+  <!-- Optional Dark Mode Button -->
+  <button 
+    onclick="toggleTheme()" 
+    class="w-full mt-3 border border-black p-2 rounded dark:border-white">
+    🌙 Toggle Theme
+  </button>
+
 </div>
 
 <script src="js/script.js"></script>
+
+<!-- Dark Mode Script -->
+<script>
+function toggleTheme() {
+  document.documentElement.classList.toggle("dark");
+}
+</script>
+
 </body>
 </html>

@@ -2,13 +2,82 @@
 <html>
 <head>
   <title>Job Details</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class"
+    }
+  </script>
 </head>
 
-<body class="bg-blue-900 text-white p-6">
+<!-- BLACK & WHITE BACKGROUND -->
+<body class="bg-white text-black p-6 min-h-screen dark:bg-black dark:text-white">
 
-<div id="jobDetails" class="bg-white text-black p-6 rounded"></div>
+<!-- Container -->
+<div id="jobDetails"></div>
 
-<script src="js/script.js"></script>
+<script>
+
+// Job Data (same as your main page)
+const jobs = [
+  { id: 1, title: "Java Developer", company: "Infosys", location: "Pune", description: "Develop Java applications using Spring Boot." },
+  { id: 2, title: "Frontend Developer", company: "TCS", location: "Mumbai", description: "Build UI using HTML, CSS, JavaScript." },
+  { id: 3, title: "Backend Developer", company: "Wipro", location: "Bangalore", description: "Work with APIs and databases." }
+];
+
+// Get selected job id
+const jobId = localStorage.getItem("jobId");
+
+// Find job
+const job = jobs.find(j => j.id == jobId);
+
+// Display job details
+const container = document.getElementById("jobDetails");
+
+if (job) {
+  container.innerHTML = `
+    <div class="max-w-xl mx-auto bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+
+      <h1 class="text-3xl font-bold mb-2">${job.title}</h1>
+
+      <p class="text-gray-600 dark:text-gray-300">${job.company}</p>
+      <p class="text-gray-500 dark:text-gray-400 mb-4">${job.location}</p>
+
+      <p class="mb-4">${job.description}</p>
+
+      <button 
+        onclick="applyJob()" 
+        class="bg-black text-white px-5 py-2 rounded hover:opacity-80">
+        Apply Now
+      </button>
+
+      <button 
+        onclick="goBack()" 
+        class="ml-3 border border-black px-5 py-2 rounded dark:border-white">
+        Back
+      </button>
+
+    </div>
+  `;
+} else {
+  container.innerHTML = `
+    <p class="text-center text-xl">No Job Found</p>
+  `;
+}
+
+// Apply function
+function applyJob() {
+  alert("Application Submitted!");
+}
+
+// Back function
+function goBack() {
+  window.location.href = "jobs.html";
+}
+
+</script>
+
 </body>
 </html>
