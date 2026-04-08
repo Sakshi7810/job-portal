@@ -48,10 +48,11 @@ if (job) {
       <p class="mb-4">${job.description}</p>
 
       <button 
-        onclick="applyJob()" 
-        class="bg-black text-white px-5 py-2 rounded hover:opacity-80">
-        Apply Now
-      </button>
+  onclick="goToApply()" 
+  class="bg-black text-white px-5 py-2 rounded hover:opacity-80">
+  Apply Now
+</button>
+
 
       <button 
         onclick="goBack()" 
@@ -68,9 +69,10 @@ if (job) {
 }
 
 // Apply function
-function applyJob() {
-  alert("Application Submitted!");
+function goToApply() {
+  window.location.href = "apply.html";
 }
+
 
 // Back function
 function goBack() {
